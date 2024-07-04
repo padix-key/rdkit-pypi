@@ -51,7 +51,7 @@ class BuildRDKit(build_ext_orig):
             ]
         )
         
-        without_python_lib = "boost:without_python_lib=False"
+        without_python_lib = "boost:without_python_lib=True"
         boost_version_string = f"boost/{boost_version}@chris/mod_boost"
         without_stacktrace = "False"
     
