@@ -4,7 +4,7 @@ requires = [
     "wheel",
     "cmake == 3.26.4",
     "oldest-supported-numpy",
-    "conan == 1.64.0",
+    "conan == 1.62.0",
     "ninja",
     "pybind11-stubgen",
     "Pillow",  # required for building the stubs
@@ -14,11 +14,11 @@ build-backend = "setuptools.build_meta"
 [tool.cibuildwheel]
 
 build-verbosity = "1"
-build-frontend = { name = "build[uv]"}
+
 # test
 test-requires = "pytest"
 test-command = "pytest --exitfirst --verbose --failed-first {package}/tests"
-test-skip = "*-win_amd64"
+# test-skip = "*-win_amd64"
 
 
 [tool.cibuildwheel.linux]
